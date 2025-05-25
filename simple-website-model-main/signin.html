@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signin</title>
+  <script>
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const username = document.getElementById("username").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const number = document.getElementById("number").value;
+
+  if (!username) {
+    alert("Username is required");
+  } else if (!email) {
+    alert("Email is required");
+  } else if (!password) {
+    alert("Password is required");
+  }
+  else if(!number){
+  alert("enter number")
+  } 
+  else {
+  alert("Form submitted successfully");
+  }
+});
+</script>
+<style>
+  body{
+    background-color:#323a67;
+    text-align: center;
+    background-image: url(image/c.jfif)
+  }
+  body h1{
+    text-align: left;
+    padding-left: 10%;
+  }
+  body p{
+    text-align: left;
+    padding-left : 10%;
+  }
+#form {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: large;
+}
+
+input[type="text"], input[type="email"], input[type="password"] ,input[type="number"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.container {
+  background-color: #f1f1f1;
+  color: #fff;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 25%;
+  margin-right: 30%;
+  margin-top: 50px;
+  width: 40%;
+  border-color: #000;
+  font-size: large;
+  background-image: url(image/godaddy.png)
+}
+
+button[type="submit"] {
+  background: #ccc;
+        color: #000;
+        border: 0;
+        outline: 0;
+        width: 50%;
+        border-radius: 50px;
+        padding: 10px 30px;
+        cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<form name="RegForm" onsubmit="return signup()" method="post">
+  <div class="container">
+    <h1>Sign in</h1>
+    <p>New to this website?<a href="#">Create an account</a></p>
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username" required>
+  <br><br><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required>
+  <br><br><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" required>
+  <br><br><br>
+  <label for="number">Number:</label><br>
+  <input type="number" id="number" name="number" required>
+  <br><br><br>
+  
+  
+</div>
+</form>
+</body>
+</html>
